@@ -1,5 +1,5 @@
 ---
-- hosts: localhost
+- hosts: demo-host
   gather_facts: yes
   become: false
   tasks:
