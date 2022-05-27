@@ -11,7 +11,7 @@
     #   tasks:
 
     - name: "just execute a ls -lrt command"
-      shell: "service --status-all"
+      shell: "whoami"
       register: "output"
 
     - debug: var=output.stdout_lines
