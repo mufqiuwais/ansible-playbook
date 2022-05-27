@@ -1,8 +1,6 @@
 ---
 - hosts: all
   connection: local
-  become: yes
-  become_method: sudo
 
   tasks:
     # - name: "Playing with Ansible and Git"
