@@ -8,24 +8,24 @@
     #   connection: local 
     #   tasks:
 
-    - name: "just execute a ls -lrt command"
-      shell: "whoami"
-      register: "output"
+    # - name: "just execute a ls -lrt command"
+    #   shell: "whoami"
+    #   register: "output"
 
-    - debug: var=output.stdout_lines
-    # - name: ensure required pip-packages are installed
-    #   pip:
-    #     name: 
-    #       - docker>=1.8.0
-    #       - PyYAML>=3.11
-    #       - docker-compose>=1.7.0
-    # - name: Check if Service Exists
-    #   shell: "if chkconfig --list | grep -q docker;   then echo true;   else echo false; fi;"
-    # - name: Ensure service is enabled
-    #   service:
-    #     name: docker
-    #     state: started
-    #     enabled: yes
+    # - debug: var=output.stdout_lines
+    - name: ensure required pip-packages are installed
+      pip:
+        name: 
+          - docker>=1.8.0
+          - PyYAML>=3.11
+          - docker-compose>=1.7.0
+    - name: Check if Service Exists
+      shell: "if chkconfig --list | grep -q docker;   then echo true;   else echo false; fi;"
+    - name: Ensure service is enabled
+      service:
+        name: docker
+        state: started
+        enabled: yes
     # - name: Restart a container
     #   docker_container:
     #     name: postgres
