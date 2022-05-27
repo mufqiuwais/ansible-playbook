@@ -12,4 +12,4 @@
           - "5432:5432"
       become: true
       vars:
-        ansible_python_interpreter: /bin/python
+        ansible_python_interpreter: /usr/bin/python
