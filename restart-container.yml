@@ -1,0 +1,12 @@
+---
+- hosts: 
+
+  tasks:
+    - name: Restart a container
+      docker_container:
+        name: postgres
+        image: postgres
+        state: started
+        restart: yes
+        ports:
+          - "5432:5432"
