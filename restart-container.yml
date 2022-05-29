@@ -28,11 +28,11 @@
     - name: Restart a container
       docker_container:
         name: postgres
-        networks:
-          - name: host
         image: postgres
         state: started
         restart: yes
+        ports:
+          - "5432:5432"
         env:
           POSTGRES_PASSWORD: password
       vars:
