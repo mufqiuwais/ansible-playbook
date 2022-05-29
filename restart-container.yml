@@ -31,7 +31,7 @@
         image: postgres
         state: started
         restart: yes
+        env:
+          POSTGRES_PASSWORD: password
       vars:
         ansible_python_interpreter: "/usr/bin/python3"
-      env:
-        POSTGRES_PASSWORD: password
