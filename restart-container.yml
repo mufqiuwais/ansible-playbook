@@ -28,6 +28,8 @@
     - name: Restart a container
       docker_container:
         name: postgres
+        networks:
+          - name: host
         image: postgres
         state: started
         restart: yes
