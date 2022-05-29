@@ -31,7 +31,5 @@
         image: postgres
         state: started
         restart: yes
-        ports:
-          - "5432:5432"
       vars:
         ansible_python_interpreter: "/usr/bin/python3"
